@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="Images/Layer 0.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <title>Todo-List App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TODO-LIST APP</h1>
+
+        <header>
+            <div class="today">
+                <h2>Today's Task</h2>
+                <span id="today"></span>
+            </div>
+            <button type="submit" class="newTaskBtn">
+                <i class="fa-solid fa-plus"></i> New Task
+              </button>
+        </header>
+
+        <form class="newTask hidden">
+            <input type="text"
+            class="addTask"
+            id="addTask"
+            name="addTask"
+            placeholder="Enter Task">
+            
+            <select name="addCategory" id="addCategory" class="addCategory">
+                <option value="none" >Choose Category</option>
+                <option value="Career">Career</option>
+                <option value="Relationship">Relationship</option>
+                <option value="Spiritual">Spiritual</option>
+                <option value="Personal">Personal</option>
+                <option value="Academics">Academics</option>
+            </select>
+
+            <button type="submit" class="addTaskBtn">
+                <i class="fa-solid fa-plus"></i> Add Item
+            </button>
+        </form>
+
+        <div class="filter hidden">
+            <input
+              type="text"
+              class="form-input-filter"
+              id="filter"
+              placeholder="Filter Category"
+            />
+          </div>
+
+        <ul class="itemList" id="itemList">
+           
+        </ul>
+
+        <button id="clearAllBtn" class="clearAllBtn hidden">Clear all Tasks</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
